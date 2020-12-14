@@ -1,6 +1,5 @@
 ﻿using Xunit;
 using PracticeDependencyInversionPrinciple.Sample2.BeforeDIP;
-using System.Collections.Generic;
 
 namespace Test.Sample2.BeforeDIP
 {
