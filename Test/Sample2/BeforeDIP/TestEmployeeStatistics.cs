@@ -1,5 +1,6 @@
 ﻿using Xunit;
 using PracticeDependencyInversionPrinciple.Sample2.BeforeDIP;
+using System.Collections.Generic;
 
 namespace Test.Sample2.BeforeDIP
 {
@@ -9,6 +10,18 @@ namespace Test.Sample2.BeforeDIP
         {
             [Fact]
             public void CountFemaleManagers_Calculated()
+            {
+                var manager = InputData.Init();
+                var stats = new EmployeeStatistics(manager);
+
+                int expected = 1;
+                Assert.Equal(expected, stats.CountFemaleManagers());
+            }
+        }
+
+        public class InputData
+        {
+            public static EmployeeManager Init()
             {
                 var manager = new EmployeeManager();
                 manager.AddEmployee(new Employee()
@@ -48,10 +61,7 @@ namespace Test.Sample2.BeforeDIP
                     Position = Position.Executive
                 });
 
-                var stats = new EmployeeStatistics(manager);
-
-                int expected = 1;
-                Assert.Equal(expected, stats.CountFemaleManagers());
+                return manager;
             }
         }
     }
