@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Sample1\AfterDIP\" />
-    <Folder Include="Sample2\AfterDIP\" />
   </ItemGroup>
 
 </Project>
