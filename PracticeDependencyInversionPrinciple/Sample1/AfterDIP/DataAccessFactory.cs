@@ -1,4 +1,4 @@
-﻿namespace PracticeDependencyInversionPrinciple.Sample1.BeforeDIP
+﻿namespace PracticeDependencyInversionPrinciple.Sample1.AfterDIP
 {
     public class DataAccessFactory
     {
